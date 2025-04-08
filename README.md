@@ -2,4 +2,4 @@ Currently working on bringing [`no_std` support](areweembeddedyet.rs) to [Ratatu
 
 TUI is great, but why stop there? Let's bring modern terminal aesthetics to bare-metal!
 
-Catch me up on <a rel="me" href="https://fosstodon.org/@j_g00da">Mastodon</a>.
+Find me on <a rel="me" href="https://fosstodon.org/@j_g00da">Fosstodon</a>.
