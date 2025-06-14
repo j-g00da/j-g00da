@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>@j-g00da&#x27;s webpage</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://jslazak.com/style.css">
+    <link rel="stylesheet" href="https://jslazak.com/color/orange.css">
+
+        <link rel="stylesheet" href="https://jslazak.com/color/background_dark.css">
+    
+    <link rel="stylesheet" href="https://jslazak.com/font-hack-subset.css">
+
+        
+    <meta name="description" content="Comparison of border merging strategies in Ratatui v0.30">
+
+    <meta property="og:description" content="Comparison of border merging strategies in Ratatui v0.30">
+    <meta property="og:title" content="@j-g00da's webpage">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jslazak.com/ratatui-border-merging/">
+
+    <meta property="og:image" content="https://jslazak.com/border-merging.png">
+    <meta name="twitter:image" content="https://jslazak.com/border-merging.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="Comparison of border merging strategies in Ratatui v0.30">
+    <meta name="twitter:title" content="@j-g00da's webpage">
+    <meta property="twitter:domain" content="jslazak.com">
+    <meta property="twitter:url" content="https://jslazak.com/ratatui-border-merging/">
+
+                <link rel="alternate" type="application/rss+xml" title="@j-g00da&#x27;s webpage RSS Feed" href="https://jslazak.com/rss.xml" />
+                <link rel="alternate" type="application/atom+xml" title="@j-g00da&#x27;s webpage Atom Feed" href="https://jslazak.com/atom.xml" />
+        <link rel="shortcut icon" type="image&#x2F;x-icon" href="/favicon.ico">
+    
+    <a rel="me" href="https://fosstodon.org/@j_g00da" style="display: none;">mastodon verification</a>
+    <meta name="fediverse:creator" content="@j_g00da@fosstodon.org">
+    <script defer src="https://umami.orhun.dev/script.js" data-website-id="69da150e-ae18-4d4c-b6e4-cff66dc2badf"></script>
+</head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://jslazak.com" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            @j-g00da&#x27;s webpage
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        
+                <nav class="menu">
+            <ul class="menu__inner">
+                <li class="active"><a href="https://jslazak.com">blog</a></li>
+            
+                <li><a href="https://jslazak.com/about">about me</a></li>
+            
+                <li><a href="https://github.com/j-g00da" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://fosstodon.org/@j_g00da" target="_blank" rel="noopener noreferrer">fosstodon</a></li>
+            
+                <li><a href="https://bsky.app/profile/jgda.bsky.social" target="_blank" rel="noopener noreferrer">bluesky</a></li>
+            
+                <li><a href="https://www.linkedin.com/in/jagoda-ślązak-7a6a90274/" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://jslazak.com/ratatui-border-merging/">Ratatui v0.30 - block border merging</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2025-06-04
+        </span>
+
+    </div>
+
+    
+
+        <div class="post-content">
+            <p><a href="https://github.com/ratatui/ratatui">Ratatui</a> v0.30 will introduce <strong>block border merging</strong>,
+a feature that previously required manual handling.</p>
+<p>You can now set the border merge strategy using <code>Block</code>’s new method: <code>merge_borders</code></p>
+<p>📚 <strong>From the docs:</strong></p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>ratatui::symbols::merge::MergeStrategy;
+</span><span>
+</span><span style="color:#65737e;">// Given several blocks with plain borders (1)
+</span><span>Block::bordered();
+</span><span style="color:#65737e;">// and other blocks with thick borders (2) which are rendered on top of the first
+</span><span>Block::bordered()
+</span><span>    .</span><span style="color:#96b5b4;">border_type</span><span>(BorderType::Thick)
+</span><span>    .</span><span style="color:#96b5b4;">merge_borders</span><span>(MergeStrategy::Exact);
+</span></code></pre>
+<pre data-lang="plain" style="background-color:#2b303b;color:#c0c5ce;" class="language-plain "><code class="language-plain" data-lang="plain"><span>┌───┐    ┌───┐  ┌───┲━━━┓┌───┐
+</span><span>│   │    │ 1 │  │   ┃   ┃│   │
+</span><span>│ 1 │    │ ┏━┿━┓│ 1 ┃ 2 ┃│ 1 │
+</span><span>│   │    │ ┃ │ ┃│   ┃   ┃│   │
+</span><span>└───╆━━━┓└─╂─┘ ┃└───┺━━━┛┢━━━┪
+</span><span>    ┃   ┃  ┃ 2 ┃         ┃   ┃
+</span><span>    ┃ 2 ┃  ┗━━━┛         ┃ 2 ┃
+</span><span>    ┃   ┃                ┃   ┃
+</span><span>    ┗━━━┛                ┗━━━┛
+</span></code></pre>
+<hr />
+<h3 id="raised-hands-acknowledgments">🙌 Acknowledgments</h3>
+<p>Big thanks to:</p>
+<ul>
+<li><a href="https://github.com/pauladam94">@pauladam94</a> (who initially started this work)</li>
+<li><a href="https://github.com/joshka">@joshka</a></li>
+<li><a href="https://github.com/orhun">@orhun</a></li>
+</ul>
+<p>They helped make this feature a reality.</p>
+<p>🔗 View the final PR: <a href="https://github.com/ratatui/ratatui/pull/1874">#1874</a><br />
+🔗 Original PR by @pauladam94: <a href="https://github.com/ratatui/ratatui/pull/1729">#1729</a><br />
+Lots of insightful discussion in both!</p>
+<hr />
+<h3 id="test-tube-merge-strategy-comparison">🧪 Merge Strategy Comparison</h3>
+<p>Below is a full comparison of the three <code>MergeStrategy</code> variants.</p>
+<p>📘 <strong>For detailed behavior</strong>, refer to the API docs.</p>
+<pre data-lang="plain" style="background-color:#2b303b;color:#c0c5ce;" class="language-plain "><code class="language-plain" data-lang="plain"><span>█      MergeStrategy::Replace      █       MergeStrategy::Exact       █       MergeStrategy::Fuzzy       █
+</span><span>█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+</span><span>█  ┌───┐    ┌───┐  ┌───┏━━━┓┌───┐  █  ┌───┐    ┌───┐  ┌───┲━━━┓┌───┐  █  ┌───┐    ┌───┐  ┌───┲━━━┓┌───┐  █
+</span><span>█  │   │    │   │  │   ┃   ┃│   │  █  │   │    │   │  │   ┃   ┃│   │  █  │   │    │   │  │   ┃   ┃│   │  █
+</span><span>█  │   │    │ ┏━━━┓│   ┃   ┃│   │  █  │   │    │ ┏━┿━┓│   ┃   ┃│   │  █  │   │    │ ┏━┿━┓│   ┃   ┃│   │  █
+</span><span>█  │   │    │ ┃ │ ┃│   ┃   ┃│   │  █  │   │    │ ┃ │ ┃│   ┃   ┃│   │  █  │   │    │ ┃ │ ┃│   ┃   ┃│   │  █
+</span><span>█  └───┏━━━┓└─┃─┘ ┃└───┗━━━┛┏━━━┓  █  └───╆━━━┓└─╂─┘ ┃└───┺━━━┛┢━━━┪  █  └───╆━━━┓└─╂─┘ ┃└───┺━━━┛┢━━━┪  █
+</span><span>█      ┃   ┃  ┃   ┃         ┃   ┃  █      ┃   ┃  ┃   ┃         ┃   ┃  █      ┃   ┃  ┃   ┃         ┃   ┃  █
+</span><span>█      ┃   ┃  ┗━━━┛         ┃   ┃  █      ┃   ┃  ┗━━━┛         ┃   ┃  █      ┃   ┃  ┗━━━┛         ┃   ┃  █
+</span><span>█      ┃   ┃                ┃   ┃  █      ┃   ┃                ┃   ┃  █      ┃   ┃                ┃   ┃  █
+</span><span>█      ┗━━━┛                ┗━━━┛  █      ┗━━━┛                ┗━━━┛  █      ┗━━━┛                ┗━━━┛  █
+</span><span>█  ┌───┐    ┌───┐  ┌───╔═══╗┌───┐  █  ┌───┐    ┌───┐  ┌───╔═══╗┌───┐  █  ┌───┐    ┌───┐  ┌───╦═══╗┌───┐  █
+</span><span>█  │   │    │   │  │   ║   ║│   │  █  │   │    │   │  │   ║   ║│   │  █  │   │    │   │  │   ║   ║│   │  █
+</span><span>█  │   │    │ ╔═══╗│   ║   ║│   │  █  │   │    │ ╔═╪═╗│   ║   ║│   │  █  │   │    │ ╔═╪═╗│   ║   ║│   │  █
+</span><span>█  │   │    │ ║ │ ║│   ║   ║│   │  █  │   │    │ ║ │ ║│   ║   ║│   │  █  │   │    │ ║ │ ║│   ║   ║│   │  █
+</span><span>█  └───╔═══╗└─║─┘ ║└───╚═══╝╔═══╗  █  └───╔═══╗└─╫─┘ ║└───╚═══╝╔═══╗  █  └───╬═══╗└─╫─┘ ║└───╩═══╝╠═══╣  █
+</span><span>█      ║   ║  ║   ║         ║   ║  █      ║   ║  ║   ║         ║   ║  █      ║   ║  ║   ║         ║   ║  █
+</span><span>█      ║   ║  ╚═══╝         ║   ║  █      ║   ║  ╚═══╝         ║   ║  █      ║   ║  ╚═══╝         ║   ║  █
+</span><span>█      ║   ║                ║   ║  █      ║   ║                ║   ║  █      ║   ║                ║   ║  █
+</span><span>█      ╚═══╝                ╚═══╝  █      ╚═══╝                ╚═══╝  █      ╚═══╝                ╚═══╝  █
+</span><span>█  ┌───┐    ┌───┐  ┌───┌╌╌╌┐┌───┐  █  ┌───┐    ┌───┐  ┌───┬╌╌╌┐┌───┐  █  ┌───┐    ┌───┐  ┌───┬╌╌╌┐┌───┐  █
+</span><span>█  │   │    │   │  │   ╎   ╎│   │  █  │   │    │   │  │   ╎   ╎│   │  █  │   │    │   │  │   ╎   ╎│   │  █
+</span><span>█  │   │    │ ┌╌╌╌┐│   ╎   ╎│   │  █  │   │    │ ┌╌╌╌┐│   ╎   ╎│   │  █  │   │    │ ┌╌┼╌┐│   ╎   ╎│   │  █
+</span><span>█  │   │    │ ╎ │ ╎│   ╎   ╎│   │  █  │   │    │ ╎ │ ╎│   ╎   ╎│   │  █  │   │    │ ╎ │ ╎│   ╎   ╎│   │  █
+</span><span>█  └───┌╌╌╌┐└─╎─┘ ╎└───└╌╌╌┘┌╌╌╌┐  █  └───┼╌╌╌┐└─╎─┘ ╎└───┴╌╌╌┘├╌╌╌┤  █  └───┼╌╌╌┐└─┼─┘ ╎└───┴╌╌╌┘├╌╌╌┤  █
+</span><span>█      ╎   ╎  ╎   ╎         ╎   ╎  █      ╎   ╎  ╎   ╎         ╎   ╎  █      ╎   ╎  ╎   ╎         ╎   ╎  █
+</span><span>█      ╎   ╎  └╌╌╌┘         ╎   ╎  █      ╎   ╎  └╌╌╌┘         ╎   ╎  █      ╎   ╎  └╌╌╌┘         ╎   ╎  █
+</span><span>█      ╎   ╎                ╎   ╎  █      ╎   ╎                ╎   ╎  █      ╎   ╎                ╎   ╎  █
+</span><span>█      └╌╌╌┘                └╌╌╌┘  █      └╌╌╌┘                └╌╌╌┘  █      └╌╌╌┘                └╌╌╌┘  █
+</span><span>█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+</span></code></pre>
+<p>📄 <strong>View full comparison:</strong><br />
+<a href="https://gist.githubusercontent.com/j-g00da/354605e610f28bc415d69552d5dee098/raw/b5ffce0e709c63e5ccf624fb276315235231cfcc/border_merging.txt">border_merging.txt (gist)</a></p>
+
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Thanks for reading! Read other posts?</span>
+                    <hr />
+                </div>
+                <div class="pagination__buttons">
+                        <span class="button previous">
+                            <a href="https://jslazak.com/are-we-embedded-yet-1/">
+                                <span class="button__icon">←</span>&nbsp;
+                                <span class="button__text">Are We Embedded Yet? #1</span>
+                            </a>
+                        </span>
+                    
+                    
+                        <span class="button next">
+                            <a href="https://jslazak.com/are-we-embedded-yet-2/">
+                                <span class="button__text">Are We Embedded Yet? #2</span>&nbsp;
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    </div>
+            </div>
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2025
+ Jagoda Ślązak</span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

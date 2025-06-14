@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>@j-g00da&#x27;s webpage</title>
+      <link>https://jslazak.com</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://jslazak.com/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 11 Jun 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Are We Embedded Yet? #2</title>
+          <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://jslazak.com/are-we-embedded-yet-2/</link>
+          <guid>https://jslazak.com/are-we-embedded-yet-2/</guid>
+          <description xml:base="https://jslazak.com/are-we-embedded-yet-2/">&lt;div style=&quot;width:100%; text-align:center;&quot;&gt;
+&lt;p&gt;&lt;em&gt;This series is meant to document and promote the joint effort of making ratatui truly portable.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;ratatui-alpha-with-no-std-support-released&quot;&gt;Ratatui alpha with no-std support released!&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;I’ve been between jobs lately, so I haven’t had much time to write an update.
+&lt;strong&gt;But great news - no_std support in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&quot;&gt;Ratatui&lt;&#x2F;a&gt; has landed!&lt;&#x2F;strong&gt;
+You can try it out in version &lt;code&gt;0.30.0-alpha.4&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;
+  
+  
+    
+    
+  
+  &lt;img src=&quot;https:&#x2F;&#x2F;jslazak.com&#x2F;other&#x2F;no_std_ratatui_build.png&quot; alt=&quot;Ratatui compiled for aarch64-unknown-none&quot; class=&quot;center&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&#x2F;&gt;
+
+
+&lt;em&gt;Ratatui compiled for &lt;code&gt;aarch64-unknown-none&lt;&#x2F;code&gt;.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rat-in-the-wild-challenge&quot;&gt;Rat in The Wild Challenge&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;We&#x27;ve launched a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&#x2F;discussions&#x2F;1886&quot;&gt;RITW challenge&lt;&#x2F;a&gt;
+to inspire you to push &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&quot;&gt;Ratatui&lt;&#x2F;a&gt; to its limits—and beyond!
+With &lt;code&gt;0.30.0-alpha.4&lt;&#x2F;code&gt;, it&#x27;s theoretically possible to run &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&quot;&gt;Ratatui&lt;&#x2F;a&gt;
+apps even on platforms like the PlayStation 1.&lt;&#x2F;p&gt;
+&lt;p&gt;
+  
+  
+    
+    
+  
+  &lt;img src=&quot;https:&#x2F;&#x2F;jslazak.com&#x2F;projects&#x2F;ratatui&#x2F;ritw.jpg&quot; alt=&quot;Rat in The Wild Challenge&quot; class=&quot;center&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&#x2F;&gt;
+
+
+&lt;em&gt;Read challenge rules &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&#x2F;discussions&#x2F;1886&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;update-mousefood&quot;&gt;Update: mousefood&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;The obvious next step is to make &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood&quot;&gt;Mousefood&lt;&#x2F;a&gt; compile without &lt;code&gt;std&lt;&#x2F;code&gt;,&lt;br &#x2F;&gt;
+and I&#x27;ve already done that! I just need a bit more time to write documentation and test it on real hardware.&lt;&#x2F;p&gt;
+&lt;p&gt;In the meantime, I&#x27;ve also been working on a simple &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood-esp32-demo&quot;&gt;demo app&lt;&#x2F;a&gt; for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood&quot;&gt;Mousefood&lt;&#x2F;a&gt;.&lt;br &#x2F;&gt;
+It’s still in the early stages, but it will likely end up in the &lt;code&gt;examples&#x2F;&lt;&#x2F;code&gt; directory of the main repo eventually.&lt;&#x2F;p&gt;
+&lt;p&gt;
+  
+  
+    
+    
+  
+  &lt;img src=&quot;https:&#x2F;&#x2F;jslazak.com&#x2F;projects&#x2F;mousefood&#x2F;esp32_demo.gif&quot; alt=&quot;Mousefood demo running on esp32&quot; class=&quot;center&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&#x2F;&gt;
+
+
+&lt;em&gt;Mousefood demo running on esp32.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;By the way, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orhun&quot;&gt;@orhun&lt;&#x2F;a&gt; - maintainer of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&quot;&gt;Ratatui&lt;&#x2F;a&gt; and author of
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orhun&#x2F;git-cliff&quot;&gt;git-cliff&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orhun&#x2F;ratzilla&quot;&gt;ratzilla&lt;&#x2F;a&gt; -
+is currently using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood&quot;&gt;Mousefood&lt;&#x2F;a&gt;
+in his &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orhun&#x2F;tuitar&#x2F;&quot;&gt;tuitar&lt;&#x2F;a&gt; project and livestreaming his progress.
+Check it out &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@orhundev&#x2F;streams&quot;&gt;here&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;video style=&quot;width: 100%; max-height: 80vh; margin-left: auto; margin-right: auto;&quot; controls&gt;
+  &lt;source src=&quot;&#x2F;other&#x2F;tuitar.mp4&quot; type=&quot;video&#x2F;mp4&quot;&gt;
+&lt;&#x2F;video&gt;
+&lt;p&gt;We&#x27;re also planning a joint &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratutility&quot;&gt;future project&lt;&#x2F;a&gt;, so stay &lt;em&gt;tuned&lt;&#x2F;em&gt;. 👀&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;talks&quot;&gt;Talks!&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Last weekend I gave a 5 minute lightning talk at &lt;a href=&quot;https:&#x2F;&#x2F;piwo.sh&quot;&gt;Poznańska Impreza Wolnego Oprogramowania&lt;&#x2F;a&gt; showing off what the
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&quot;&gt;Ratatui&lt;&#x2F;a&gt; community is cooking.&lt;&#x2F;p&gt;
+&lt;p&gt;Besides talking about &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood&quot;&gt;Mousefood&lt;&#x2F;a&gt;
+and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&#x2F;discussions&#x2F;1886&quot;&gt;RITW challenge&lt;&#x2F;a&gt;,
+I showcased demos of:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;junkdog&#x2F;tachyonfx&quot;&gt;tachyonfx&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;cxreiff&#x2F;bevy_ratatui_camera&quot;&gt;bevy_ratatui_camera&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orhun&#x2F;ratzilla&quot;&gt;ratzilla&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+  
+  
+    
+    
+  
+  &lt;img src=&quot;https:&#x2F;&#x2F;jslazak.com&#x2F;other&#x2F;piwo2025.png&quot; alt=&quot;Me giving a Ratatui lightning talk at Poznańska Impreza Wolnego Oprogramowania&quot; class=&quot;center&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&#x2F;&gt;
+
+&lt;p&gt;Next month I will be giving a talk about &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood&quot;&gt;Mousefood&lt;&#x2F;a&gt;
+and porting &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&quot;&gt;Ratatui&lt;&#x2F;a&gt; &lt;em&gt;everywhere&lt;&#x2F;em&gt;
+at &lt;a href=&quot;https:&#x2F;&#x2F;www.meetup.com&#x2F;pl-PL&#x2F;rust-gdansk&#x2F;&quot;&gt;Rust Gdańsk&lt;&#x2F;a&gt;. See you there!&lt;&#x2F;p&gt;
+
+  
+  
+    
+    
+  
+  &lt;img src=&quot;https:&#x2F;&#x2F;jslazak.com&#x2F;other&#x2F;rust_gdansk.webp.avif&quot; alt=&quot;Rust Gdansk Meetup #9 - Jagoda Ślązak - Ratatui - Are We Embedded Yet? 1 July, 6 - 9 pm, Europejskie Centrum Solidarności&quot; class=&quot;center&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&#x2F;&gt;
+
+</description>
+      </item>
+      <item>
+          <title>Ratatui v0.30 - block border merging</title>
+          <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://jslazak.com/ratatui-border-merging/</link>
+          <guid>https://jslazak.com/ratatui-border-merging/</guid>
+          <description xml:base="https://jslazak.com/ratatui-border-merging/">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&quot;&gt;Ratatui&lt;&#x2F;a&gt; v0.30 will introduce &lt;strong&gt;block border merging&lt;&#x2F;strong&gt;,
+a feature that previously required manual handling.&lt;&#x2F;p&gt;
+&lt;p&gt;You can now set the border merge strategy using &lt;code&gt;Block&lt;&#x2F;code&gt;’s new method: &lt;code&gt;merge_borders&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;📚 &lt;strong&gt;From the docs:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;ratatui::symbols::merge::MergeStrategy;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; Given several blocks with plain borders (1)
+&lt;&#x2F;span&gt;&lt;span&gt;Block::bordered();
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; and other blocks with thick borders (2) which are rendered on top of the first
+&lt;&#x2F;span&gt;&lt;span&gt;Block::bordered()
+&lt;&#x2F;span&gt;&lt;span&gt;    .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;border_type&lt;&#x2F;span&gt;&lt;span&gt;(BorderType::Thick)
+&lt;&#x2F;span&gt;&lt;span&gt;    .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;merge_borders&lt;&#x2F;span&gt;&lt;span&gt;(MergeStrategy::Exact);
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;plain&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-plain &quot;&gt;&lt;code class=&quot;language-plain&quot; data-lang=&quot;plain&quot;&gt;&lt;span&gt;┌───┐    ┌───┐  ┌───┲━━━┓┌───┐
+&lt;&#x2F;span&gt;&lt;span&gt;│   │    │ 1 │  │   ┃   ┃│   │
+&lt;&#x2F;span&gt;&lt;span&gt;│ 1 │    │ ┏━┿━┓│ 1 ┃ 2 ┃│ 1 │
+&lt;&#x2F;span&gt;&lt;span&gt;│   │    │ ┃ │ ┃│   ┃   ┃│   │
+&lt;&#x2F;span&gt;&lt;span&gt;└───╆━━━┓└─╂─┘ ┃└───┺━━━┛┢━━━┪
+&lt;&#x2F;span&gt;&lt;span&gt;    ┃   ┃  ┃ 2 ┃         ┃   ┃
+&lt;&#x2F;span&gt;&lt;span&gt;    ┃ 2 ┃  ┗━━━┛         ┃ 2 ┃
+&lt;&#x2F;span&gt;&lt;span&gt;    ┃   ┃                ┃   ┃
+&lt;&#x2F;span&gt;&lt;span&gt;    ┗━━━┛                ┗━━━┛
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;raised-hands-acknowledgments&quot;&gt;🙌 Acknowledgments&lt;&#x2F;h3&gt;
+&lt;p&gt;Big thanks to:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;pauladam94&quot;&gt;@pauladam94&lt;&#x2F;a&gt; (who initially started this work)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;joshka&quot;&gt;@joshka&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orhun&quot;&gt;@orhun&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;They helped make this feature a reality.&lt;&#x2F;p&gt;
+&lt;p&gt;🔗 View the final PR: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&#x2F;pull&#x2F;1874&quot;&gt;#1874&lt;&#x2F;a&gt;&lt;br &#x2F;&gt;
+🔗 Original PR by @pauladam94: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&#x2F;pull&#x2F;1729&quot;&gt;#1729&lt;&#x2F;a&gt;&lt;br &#x2F;&gt;
+Lots of insightful discussion in both!&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;test-tube-merge-strategy-comparison&quot;&gt;🧪 Merge Strategy Comparison&lt;&#x2F;h3&gt;
+&lt;p&gt;Below is a full comparison of the three &lt;code&gt;MergeStrategy&lt;&#x2F;code&gt; variants.&lt;&#x2F;p&gt;
+&lt;p&gt;📘 &lt;strong&gt;For detailed behavior&lt;&#x2F;strong&gt;, refer to the API docs.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;plain&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-plain &quot;&gt;&lt;code class=&quot;language-plain&quot; data-lang=&quot;plain&quot;&gt;&lt;span&gt;█      MergeStrategy::Replace      █       MergeStrategy::Exact       █       MergeStrategy::Fuzzy       █
+&lt;&#x2F;span&gt;&lt;span&gt;█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+&lt;&#x2F;span&gt;&lt;span&gt;█  ┌───┐    ┌───┐  ┌───┏━━━┓┌───┐  █  ┌───┐    ┌───┐  ┌───┲━━━┓┌───┐  █  ┌───┐    ┌───┐  ┌───┲━━━┓┌───┐  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  │   │    │   │  │   ┃   ┃│   │  █  │   │    │   │  │   ┃   ┃│   │  █  │   │    │   │  │   ┃   ┃│   │  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  │   │    │ ┏━━━┓│   ┃   ┃│   │  █  │   │    │ ┏━┿━┓│   ┃   ┃│   │  █  │   │    │ ┏━┿━┓│   ┃   ┃│   │  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  │   │    │ ┃ │ ┃│   ┃   ┃│   │  █  │   │    │ ┃ │ ┃│   ┃   ┃│   │  █  │   │    │ ┃ │ ┃│   ┃   ┃│   │  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  └───┏━━━┓└─┃─┘ ┃└───┗━━━┛┏━━━┓  █  └───╆━━━┓└─╂─┘ ┃└───┺━━━┛┢━━━┪  █  └───╆━━━┓└─╂─┘ ┃└───┺━━━┛┢━━━┪  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      ┃   ┃  ┃   ┃         ┃   ┃  █      ┃   ┃  ┃   ┃         ┃   ┃  █      ┃   ┃  ┃   ┃         ┃   ┃  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      ┃   ┃  ┗━━━┛         ┃   ┃  █      ┃   ┃  ┗━━━┛         ┃   ┃  █      ┃   ┃  ┗━━━┛         ┃   ┃  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      ┃   ┃                ┃   ┃  █      ┃   ┃                ┃   ┃  █      ┃   ┃                ┃   ┃  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      ┗━━━┛                ┗━━━┛  █      ┗━━━┛                ┗━━━┛  █      ┗━━━┛                ┗━━━┛  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  ┌───┐    ┌───┐  ┌───╔═══╗┌───┐  █  ┌───┐    ┌───┐  ┌───╔═══╗┌───┐  █  ┌───┐    ┌───┐  ┌───╦═══╗┌───┐  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  │   │    │   │  │   ║   ║│   │  █  │   │    │   │  │   ║   ║│   │  █  │   │    │   │  │   ║   ║│   │  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  │   │    │ ╔═══╗│   ║   ║│   │  █  │   │    │ ╔═╪═╗│   ║   ║│   │  █  │   │    │ ╔═╪═╗│   ║   ║│   │  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  │   │    │ ║ │ ║│   ║   ║│   │  █  │   │    │ ║ │ ║│   ║   ║│   │  █  │   │    │ ║ │ ║│   ║   ║│   │  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  └───╔═══╗└─║─┘ ║└───╚═══╝╔═══╗  █  └───╔═══╗└─╫─┘ ║└───╚═══╝╔═══╗  █  └───╬═══╗└─╫─┘ ║└───╩═══╝╠═══╣  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      ║   ║  ║   ║         ║   ║  █      ║   ║  ║   ║         ║   ║  █      ║   ║  ║   ║         ║   ║  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      ║   ║  ╚═══╝         ║   ║  █      ║   ║  ╚═══╝         ║   ║  █      ║   ║  ╚═══╝         ║   ║  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      ║   ║                ║   ║  █      ║   ║                ║   ║  █      ║   ║                ║   ║  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      ╚═══╝                ╚═══╝  █      ╚═══╝                ╚═══╝  █      ╚═══╝                ╚═══╝  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  ┌───┐    ┌───┐  ┌───┌╌╌╌┐┌───┐  █  ┌───┐    ┌───┐  ┌───┬╌╌╌┐┌───┐  █  ┌───┐    ┌───┐  ┌───┬╌╌╌┐┌───┐  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  │   │    │   │  │   ╎   ╎│   │  █  │   │    │   │  │   ╎   ╎│   │  █  │   │    │   │  │   ╎   ╎│   │  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  │   │    │ ┌╌╌╌┐│   ╎   ╎│   │  █  │   │    │ ┌╌╌╌┐│   ╎   ╎│   │  █  │   │    │ ┌╌┼╌┐│   ╎   ╎│   │  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  │   │    │ ╎ │ ╎│   ╎   ╎│   │  █  │   │    │ ╎ │ ╎│   ╎   ╎│   │  █  │   │    │ ╎ │ ╎│   ╎   ╎│   │  █
+&lt;&#x2F;span&gt;&lt;span&gt;█  └───┌╌╌╌┐└─╎─┘ ╎└───└╌╌╌┘┌╌╌╌┐  █  └───┼╌╌╌┐└─╎─┘ ╎└───┴╌╌╌┘├╌╌╌┤  █  └───┼╌╌╌┐└─┼─┘ ╎└───┴╌╌╌┘├╌╌╌┤  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      ╎   ╎  ╎   ╎         ╎   ╎  █      ╎   ╎  ╎   ╎         ╎   ╎  █      ╎   ╎  ╎   ╎         ╎   ╎  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      ╎   ╎  └╌╌╌┘         ╎   ╎  █      ╎   ╎  └╌╌╌┘         ╎   ╎  █      ╎   ╎  └╌╌╌┘         ╎   ╎  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      ╎   ╎                ╎   ╎  █      ╎   ╎                ╎   ╎  █      ╎   ╎                ╎   ╎  █
+&lt;&#x2F;span&gt;&lt;span&gt;█      └╌╌╌┘                └╌╌╌┘  █      └╌╌╌┘                └╌╌╌┘  █      └╌╌╌┘                └╌╌╌┘  █
+&lt;&#x2F;span&gt;&lt;span&gt;█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;📄 &lt;strong&gt;View full comparison:&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;gist.githubusercontent.com&#x2F;j-g00da&#x2F;354605e610f28bc415d69552d5dee098&#x2F;raw&#x2F;b5ffce0e709c63e5ccf624fb276315235231cfcc&#x2F;border_merging.txt&quot;&gt;border_merging.txt (gist)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Are We Embedded Yet? #1</title>
+          <pubDate>Sun, 04 May 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://jslazak.com/are-we-embedded-yet-1/</link>
+          <guid>https://jslazak.com/are-we-embedded-yet-1/</guid>
+          <description xml:base="https://jslazak.com/are-we-embedded-yet-1/">&lt;div style=&quot;width:100%; text-align:center;&quot;&gt;
+&lt;p&gt;&lt;em&gt;This series is meant to document and promote the joint effort of making ratatui truly portable.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;update-no-std-ratatui&quot;&gt;Update: no_std ratatui&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&#x2F;pull&#x2F;1778&quot;&gt;&lt;code&gt;Backend::Error&lt;&#x2F;code&gt; merged!&lt;&#x2F;a&gt;
+One of the blockers for no_std ratatui was the explicit use of &lt;code&gt;std::io::Error&lt;&#x2F;code&gt; in &lt;code&gt;Backend&lt;&#x2F;code&gt; (and
+by extension, in &lt;code&gt;Terminal&lt;&#x2F;code&gt; as well).
+Now, &lt;code&gt;Backend&lt;&#x2F;code&gt; implementations must define an associated &lt;code&gt;Error&lt;&#x2F;code&gt; type.
+Built-in backends will still use &lt;code&gt;std::io::Error&lt;&#x2F;code&gt;, but third-party ones
+like &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood&quot;&gt;mousefood&lt;&#x2F;a&gt;
+can now use a different error type - which will enable a proper &lt;code&gt;no_std&lt;&#x2F;code&gt; compatibility!&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m actually working on a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&#x2F;pull&#x2F;1817&quot;&gt;follow-up PR&lt;&#x2F;a&gt;
+and ran into a pretty interesting issue,
+so if anyone reading this has ideas, feel free to jump in and comment.&lt;&#x2F;p&gt;
+&lt;p&gt;As for the layout cache problem I mentioned in the last post -
+since there&#x27;s no great solution, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&#x2F;pull&#x2F;1795&quot;&gt;the decision for now
+is to simply &lt;strong&gt;not provide a cache in &lt;code&gt;no_std&lt;&#x2F;code&gt; mode&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt;.
+When this is merged, the last things left would be just few minor tweaks and adding &lt;code&gt;std&lt;&#x2F;code&gt; feature flag.&lt;&#x2F;p&gt;
+&lt;div style=&quot;width:100%; text-align:center;&quot;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;We are one step closer to no_std ratatui.&lt;&#x2F;em&gt; &lt;br &#x2F;&gt;
+██████████████████░░ 90%&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;update-mousefood&quot;&gt;Update: mousefood&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood&quot;&gt;Mousefood&lt;&#x2F;a&gt; recently got italic modifier support
+as well as readme section about bold&#x2F;italic fonts that also points out some limitations.
+Additionally, v0.2.1 patch was released that mainly targeted some inaccuracies in the docs.&lt;&#x2F;p&gt;
+&lt;p&gt;
+  
+  
+    
+    
+  
+  &lt;img src=&quot;https:&#x2F;&#x2F;jslazak.com&#x2F;projects&#x2F;mousefood&#x2F;bold_italic.png&quot; alt=&quot;bold and italic fonts on mousefood&quot; class=&quot;center&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&#x2F;&gt;
+
+
+&lt;em&gt;Bold and italic modifiers in mousefood, italic will be available with the next release.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The development of mousefood may be a bit slower right now,
+as I&#x27;m focusing on finalizing &lt;code&gt;no_std&lt;&#x2F;code&gt; support in Ratatui -
+but I&#x27;m still making sure to work on it regularly.
+&lt;em&gt;If you&#x27;d like to help out, feel free to reach out!&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Full changelog of v0.2.1:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tractor-refactor&quot;&gt;🚜 Refactor&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;(examples)&lt;&#x2F;em&gt; Remove unnecessary &lt;code&gt;extern crate&lt;&#x2F;code&gt; from simulator example&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;books-documentation&quot;&gt;📚 Documentation&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;(readme)&lt;&#x2F;em&gt; Fix simulator code snippet&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;gear-miscellaneous-tasks&quot;&gt;⚙️ Miscellaneous Tasks&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;(examples)&lt;&#x2F;em&gt; Configure simulator example in Cargo.toml&lt;&#x2F;li&gt;
+&lt;li&gt;Update list of excluded paths in Cargo.toml&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;soft-ratatui&quot;&gt;soft_ratatui&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Software rendering backend for &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&quot;&gt;ratatui&lt;&#x2F;a&gt;. No GPU required. TUI everywhere.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Another new &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&quot;&gt;Ratatui&lt;&#x2F;a&gt; backend just dropped -
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gold-silver-copper&#x2F;soft_ratatui&quot;&gt;soft_ratatui&lt;&#x2F;a&gt;
+by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gold-silver-copper&quot;&gt;@gold-silver-copper&lt;&#x2F;a&gt;,
+the creator of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gold-silver-copper&#x2F;egui_ratatui&quot;&gt;egui_ratatui&lt;&#x2F;a&gt;.
+The crate uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;linebender&#x2F;tiny-skia&quot;&gt;tiny-skia&lt;&#x2F;a&gt; to render efficiently directly to a window,
+ditching the terminal emulator completely.
+This allows for much higher frame rates out of the box (up to 200 FPS).
+It will be especially useful for TUI games or interactive tools where smooth performance really matters!&lt;&#x2F;p&gt;
+&lt;p&gt;Soft_ratatui is under heavy development and I was told that it will eventually move away from
+tiny-skia in favor of a custom lightweight renderer.&lt;&#x2F;p&gt;
+
+  
+  
+    
+    
+  
+  &lt;img src=&quot;https:&#x2F;&#x2F;jslazak.com&#x2F;other&#x2F;soft_ratatui.png&quot; alt=&quot;colors_rgb example running at 140 FPS using soft_ratatui&quot; class=&quot;center&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&#x2F;&gt;
+
+&lt;p&gt;&lt;em&gt;colors_rgb running at over 140 FPS, &quot;s&quot; in &quot;fps&quot; gets cut off as the example doesn&#x27;t expect that many digits!&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;thanks&quot;&gt;Thanks!&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Huge thanks for the response to the last post -
+it got way more attention than I expected, and even made its way into
+&lt;a href=&quot;https:&#x2F;&#x2F;this-week-in-rust.org&#x2F;blog&#x2F;2025&#x2F;04&#x2F;23&#x2F;this-week-in-rust-596&#x2F;&quot;&gt;&lt;em&gt;This Week in Rust #596&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;
+and &lt;a href=&quot;https:&#x2F;&#x2F;www.theembeddedrustacean.com&#x2F;p&#x2F;the-embedded-rustacean-issue-44&quot;&gt;&lt;em&gt;The Embedded Rustacean #44&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;.
+Thanks to everyone who helped spread Ratatui even further!&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Are We Embedded Yet? #0</title>
+          <pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://jslazak.com/are-we-embedded-yet-0/</link>
+          <guid>https://jslazak.com/are-we-embedded-yet-0/</guid>
+          <description xml:base="https://jslazak.com/are-we-embedded-yet-0/">&lt;div style=&quot;width:100%; text-align:center;&quot;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Ratatui&lt;&#x2F;strong&gt; gave us beautiful TUIs.&lt;&#x2F;em&gt; &lt;br &#x2F;&gt;
+&lt;em&gt;&lt;strong&gt;Ratzilla&lt;&#x2F;strong&gt; expanded it to the web.&lt;&#x2F;em&gt; &lt;br &#x2F;&gt;
+&lt;em&gt;But why shall we stop there?&lt;&#x2F;em&gt; &lt;br &#x2F;&gt;
+&lt;em&gt;&lt;strong&gt;Why shall we stop anywhere?&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h1 style=&quot;justify-content:center;&quot;&gt; Are We Embedded Yet? &lt;&#x2F;h1&gt;
+This series is meant to document and promote the joint effort of making ratatui truly portable.
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;no-std-ratatui&quot;&gt;no_std ratatui&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;I&#x27;ve started the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&#x2F;discussions&#x2F;1746&quot;&gt;discussion&lt;&#x2F;a&gt;
+on making &lt;code&gt;ratatui-core&lt;&#x2F;code&gt; crate no_std just two weeks ago, when I realized
+that &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood&quot;&gt;mousefood&lt;&#x2F;a&gt; can&#x27;t become anything more than
+just a gimmick without few upstream changes.
+Today, thanks to commitment of the maintainers and help from the community,
+I&#x27;m pretty optimistic that we can see ratatui on stm32 in just few weeks.
+And I&#x27;m not talking about just &lt;code&gt;ratatui-core&lt;&#x2F;code&gt; (which was planned for the &quot;first stage&quot;),
+but &lt;code&gt;ratatui-widgets&lt;&#x2F;code&gt; is no_std already!&lt;&#x2F;p&gt;
+&lt;p&gt;Check out the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&#x2F;issues&#x2F;1750&quot;&gt;tracking issue&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;p&gt;The last major thing to resolve is to provide an alternative, no_std implementation
+of layout caching.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;&quot;&gt;
+  
+  
+  &lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood&#x2F;blob&#x2F;99b654737ff30c08a9abdfcdee99eef6bc876712&#x2F;assets&#x2F;logo&#x2F;mousefood_text_light.svg?raw=true&quot; alt=&quot;mousefood&quot; class=&quot;center&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&#x2F;&gt;
+
+&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood&quot;&gt;Mousefood&lt;&#x2F;a&gt; v0.2 is out!&lt;&#x2F;strong&gt;
+This is the point, where the project stops being just a proof of concept and due to that,
+most of the changes since v0.1 are refactoring ones.
+I decided that this also is the time to finally write tests - currently coverage is just around 60%,
+but this should greatly improve in the coming weeks.
+This doesn&#x27;t mean there are no new features! The new version comes with an optional support of EPDs!&lt;&#x2F;p&gt;
+
+  
+  
+    
+    
+  
+  &lt;img src=&quot;https:&#x2F;&#x2F;jslazak.com&#x2F;projects&#x2F;mousefood&#x2F;epd-weact.jpg&quot; alt=&quot;mousefood on epd&quot; class=&quot;center&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&#x2F;&gt;
+
+&lt;p&gt;More on that in the &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;mousefood&#x2F;0.2.0&#x2F;mousefood&#x2F;#epd-support&quot;&gt;docs&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-s-next&quot;&gt;What&#x27;s next?&lt;&#x2F;h3&gt;
+&lt;p&gt;The obvious next step after ratatui becoming no_std would be adapting
+mousefood to use that and testing it out on some previously unsupported device
+(I actually already have a stm32f7 waiting for that.)
+&lt;em&gt;But&lt;&#x2F;em&gt; there is still a lot of other things to complete in mousefood
+such as cursor support (currently cursor is hardcoded at (0,0) and hidden),
+handling the rest of modifiers (there&#x27;s a PR by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;y5&quot;&gt;@y5&lt;&#x2F;a&gt; waiting
+for the next release of ratatui that will also add colored underlines)
+or color conversion from indexed colors.
+I also want to eventually add terminal themes.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Also&lt;&#x2F;em&gt; I want to finally start writing some actual apps using it, instead of just demos!
+I&#x27;ve got some interesting ideas for that, but first I need to find some more time...
+If you haven&#x27;t seen already, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;micielski&quot;&gt;@micielski&lt;&#x2F;a&gt; actually managed to
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;intuis&#x2F;mnyaoo32&quot;&gt;read IRC messages on esp32 and display them on SPI screen using mousefood!&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ratatui-uefi&quot;&gt;ratatui-uefi&lt;&#x2F;h2&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Something I didn’t know until recently: there &lt;em&gt;are&lt;&#x2F;em&gt; UEFI targets with std support in nightly Rust.
+Even crazier - just a few days ago, I didn’t expect to see &lt;strong&gt;Ratatui running in UEFI&lt;&#x2F;strong&gt; this week! Check out
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;reubeno&quot;&gt;@reubeno&lt;&#x2F;a&gt;&#x27;s new ratatui backend -
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;reubeno&#x2F;tui-uefi?tab=readme-ov-file&quot;&gt;&lt;code&gt;ratatui-uefi&lt;&#x2F;code&gt; and a companion crate for handling inputs - &lt;code&gt;terminput-uefi&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;
+A truly amazing project that opens doors to some fun ideas.&lt;&#x2F;p&gt;
+
+  
+  
+    
+    
+  
+  &lt;img src=&quot;https:&#x2F;&#x2F;jslazak.com&#x2F;other&#x2F;ratatui-uefi.png&quot; alt=&quot;mousefood&quot; class=&quot;center&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&#x2F;&gt;
+
+</description>
+      </item>
+      <item>
+          <title>About me</title>
+          <pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://jslazak.com/about/</link>
+          <guid>https://jslazak.com/about/</guid>
+          <description xml:base="https://jslazak.com/about/">
+  
+  
+    
+    
+  
+  &lt;img src=&quot;https:&#x2F;&#x2F;jslazak.com&#x2F;me.png&quot; alt=&quot;j-g00da&quot; class=&quot;left&quot; style=&quot;max-width: 75px;&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&#x2F;&gt;
+
+&lt;p&gt;Hi! &lt;br &#x2F;&gt;
+I’m Jagoda — a full-stack developer, open source enthusiast,
+self-proclaimed artist, and full-time tinkerer. &lt;br &#x2F;&gt;
+&lt;em&gt;Mostly&lt;&#x2F;em&gt; a tinkerer.&lt;&#x2F;p&gt;
+&lt;p&gt;🏗 Currently working on:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j-g00da&#x2F;mousefood&quot;&gt;&lt;code&gt;mousefood&lt;&#x2F;code&gt; backend for &lt;code&gt;ratatui&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&#x2F;issues&#x2F;1750&quot;&gt;bringing &lt;code&gt;no_std&lt;&#x2F;code&gt; support to &lt;code&gt;ratatui&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;embedded vga driver in rust&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;this blog!&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;probably some other stuff, TBA&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This page might get an update someday. Maybe. We’ll see.&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
