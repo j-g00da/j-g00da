@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>@j-g00da&#x27;s webpage</title>
+      <link>https://jslazak.com</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://jslazak.com/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 11 Jun 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Are We Embedded Yet? #2</title>
+          <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://jslazak.com/are-we-embedded-yet-2/</link>
+          <guid>https://jslazak.com/are-we-embedded-yet-2/</guid>
+          <description xml:base="https://jslazak.com/are-we-embedded-yet-2/">&lt;div style=&quot;width:100%; text-align:center;&quot;&gt;
+&lt;p&gt;&lt;em&gt;This series is meant to document and promote the joint effort of making ratatui truly portable.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;ratatui-alpha-with-no-std-support-released&quot;&gt;Ratatui alpha with no-std support released!&lt;&#x2F;h2&gt;</description>
+      </item>
+      <item>
+          <title>Ratatui v0.30 - block border merging</title>
+          <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://jslazak.com/ratatui-border-merging/</link>
+          <guid>https://jslazak.com/ratatui-border-merging/</guid>
+          <description xml:base="https://jslazak.com/ratatui-border-merging/">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ratatui&#x2F;ratatui&quot;&gt;Ratatui&lt;&#x2F;a&gt; v0.30 will introduce &lt;strong&gt;block border merging&lt;&#x2F;strong&gt;,
+a feature that previously required manual handling.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Are We Embedded Yet? #1</title>
+          <pubDate>Sun, 04 May 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://jslazak.com/are-we-embedded-yet-1/</link>
+          <guid>https://jslazak.com/are-we-embedded-yet-1/</guid>
+          <description xml:base="https://jslazak.com/are-we-embedded-yet-1/">&lt;div style=&quot;width:100%; text-align:center;&quot;&gt;
+&lt;p&gt;&lt;em&gt;This series is meant to document and promote the joint effort of making ratatui truly portable.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;update-no-std-ratatui&quot;&gt;Update: no_std ratatui&lt;&#x2F;h2&gt;</description>
+      </item>
+      <item>
+          <title>Are We Embedded Yet? #0</title>
+          <pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://jslazak.com/are-we-embedded-yet-0/</link>
+          <guid>https://jslazak.com/are-we-embedded-yet-0/</guid>
+          <description xml:base="https://jslazak.com/are-we-embedded-yet-0/">&lt;div style=&quot;width:100%; text-align:center;&quot;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Ratatui&lt;&#x2F;strong&gt; gave us beautiful TUIs.&lt;&#x2F;em&gt; &lt;br &#x2F;&gt;
+&lt;em&gt;&lt;strong&gt;Ratzilla&lt;&#x2F;strong&gt; expanded it to the web.&lt;&#x2F;em&gt; &lt;br &#x2F;&gt;
+&lt;em&gt;But why shall we stop there?&lt;&#x2F;em&gt; &lt;br &#x2F;&gt;
+&lt;em&gt;&lt;strong&gt;Why shall we stop anywhere?&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h1 style=&quot;justify-content:center;&quot;&gt; Are We Embedded Yet? &lt;&#x2F;h1&gt;
+This series is meant to document and promote the joint effort of making ratatui truly portable.
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;div&gt;</description>
+      </item>
+    </channel>
+</rss>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>@j-g00da&#x27;s webpage</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://jslazak.com/style.css">
+    <link rel="stylesheet" href="https://jslazak.com/color/orange.css">
+
+        <link rel="stylesheet" href="https://jslazak.com/color/background_blue.css">
+    
+    <link rel="stylesheet" href="https://jslazak.com/font-hack-subset.css">
+
+        
+    <meta name="description" content="No-std support, RITW challenge, Mousefood-based guitar tuner and more!">
+
+    <meta property="og:description" content="No-std support, RITW challenge, Mousefood-based guitar tuner and more!">
+    <meta property="og:title" content="@j-g00da's webpage">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jslazak.com/are-we-embedded-yet-2/">
+
+    <meta property="og:image" content="https://jslazak.com/are-we-embedded-yet.png">
+    <meta name="twitter:image" content="https://jslazak.com/are-we-embedded-yet.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="No-std support, RITW challenge, Mousefood-based guitar tuner and more!">
+    <meta name="twitter:title" content="@j-g00da's webpage">
+    <meta property="twitter:domain" content="jslazak.com">
+    <meta property="twitter:url" content="https://jslazak.com/are-we-embedded-yet-2/">
+
+                <link rel="alternate" type="application/rss+xml" title="@j-g00da&#x27;s webpage RSS Feed" href="https://jslazak.com/rss.xml" />
+                <link rel="alternate" type="application/atom+xml" title="@j-g00da&#x27;s webpage Atom Feed" href="https://jslazak.com/atom.xml" />
+        <link rel="shortcut icon" type="image&#x2F;x-icon" href="/favicon.ico">
+    
+    <a rel="me" href="https://fosstodon.org/@j_g00da" style="display: none;">mastodon verification</a>
+    <meta name="fediverse:creator" content="@j_g00da@fosstodon.org">
+    <script defer src="https://umami.orhun.dev/script.js" data-website-id="69da150e-ae18-4d4c-b6e4-cff66dc2badf"></script>
+</head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://jslazak.com" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            @j-g00da&#x27;s webpage
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        
+                <nav class="menu">
+            <ul class="menu__inner">
+                <li class="active"><a href="https://jslazak.com">blog</a></li>
+            
+                <li><a href="https://jslazak.com/about">about me</a></li>
+            
+                <li><a href="https://github.com/j-g00da" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://jslazak.com/socials">socials</a></li>
+            
+                <li><a href="https://jslazak.com/art">art</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://jslazak.com/are-we-embedded-yet-2/">Are We Embedded Yet? #2</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2025-06-11
+        </span>
+
+    </div>
+
+    
+
+        <div class="post-content">
+            <div style="width:100%; text-align:center;">
+<p><em>This series is meant to document and promote the joint effort of making ratatui truly portable.</em></p>
+</div>
+<h2 id="ratatui-alpha-with-no-std-support-released">Ratatui alpha with no-std support released!</h2>
+<span id="continue-reading"></span>
+<hr />
+<p>I’ve been between jobs lately, so I haven’t had much time to write an update.
+<strong>But great news - no_std support in <a href="https://github.com/ratatui/ratatui">Ratatui</a> has landed!</strong>
+You can try it out in version <code>0.30.0-alpha.4</code>.</p>
+<p>
+  
+  
+    
+    
+  
+  <img src="https://jslazak.com/other/no_std_ratatui_build.png" alt="Ratatui compiled for aarch64-unknown-none" class="center" decoding="async" loading="lazy"/>
+
+
+<em>Ratatui compiled for <code>aarch64-unknown-none</code>.</em></p>
+<h2 id="rat-in-the-wild-challenge">Rat in The Wild Challenge</h2>
+<hr />
+<p>We've launched a <a href="https://github.com/ratatui/ratatui/discussions/1886">RITW challenge</a>
+to inspire you to push <a href="https://github.com/ratatui/ratatui">Ratatui</a> to its limits—and beyond!
+With <code>0.30.0-alpha.4</code>, it's theoretically possible to run <a href="https://github.com/ratatui/ratatui">Ratatui</a>
+apps even on platforms like the PlayStation 1.</p>
+<p>
+  
+  
+    
+    
+  
+  <img src="https://jslazak.com/projects/ratatui/ritw.jpg" alt="Rat in The Wild Challenge" class="center" decoding="async" loading="lazy"/>
+
+
+<em>Read challenge rules <a href="https://github.com/ratatui/ratatui/discussions/1886">here</a></em></p>
+<h2 id="update-mousefood">Update: mousefood</h2>
+<hr />
+<p>The obvious next step is to make <a href="https://github.com/j-g00da/mousefood">Mousefood</a> compile without <code>std</code>,<br />
+and I've already done that! I just need a bit more time to write documentation and test it on real hardware.</p>
+<p>In the meantime, I've also been working on a simple <a href="https://github.com/j-g00da/mousefood-esp32-demo">demo app</a> for <a href="https://github.com/j-g00da/mousefood">Mousefood</a>.<br />
+It’s still in the early stages, but it will likely end up in the <code>examples/</code> directory of the main repo eventually.</p>
+<p>
+  
+  
+    
+    
+  
+  <img src="https://jslazak.com/projects/mousefood/esp32_demo.gif" alt="Mousefood demo running on esp32" class="center" decoding="async" loading="lazy"/>
+
+
+<em>Mousefood demo running on esp32.</em></p>
+<p>By the way, <a href="https://github.com/orhun">@orhun</a> - maintainer of <a href="https://github.com/ratatui/ratatui">Ratatui</a> and author of
+<a href="https://github.com/orhun/git-cliff">git-cliff</a> and <a href="https://github.com/orhun/ratzilla">ratzilla</a> -
+is currently using <a href="https://github.com/j-g00da/mousefood">Mousefood</a>
+in his <a href="https://github.com/orhun/tuitar/">tuitar</a> project and livestreaming his progress.
+Check it out <a href="https://www.youtube.com/@orhundev/streams">here</a>!</p>
+<video style="width: 100%; max-height: 80vh; margin-left: auto; margin-right: auto;" controls>
+  <source src="/other/tuitar.mp4" type="video/mp4">
+</video>
+<p>We're also planning a joint <a href="https://github.com/ratutility">future project</a>, so stay <em>tuned</em>. 👀</p>
+<h2 id="talks">Talks!</h2>
+<hr />
+<p>Last weekend I gave a 5 minute lightning talk at <a href="https://piwo.sh">Poznańska Impreza Wolnego Oprogramowania</a> showing off what the
+<a href="https://github.com/ratatui/ratatui">Ratatui</a> community is cooking.</p>
+<p>Besides talking about <a href="https://github.com/j-g00da/mousefood">Mousefood</a>
+and <a href="https://github.com/ratatui/ratatui/discussions/1886">RITW challenge</a>,
+I showcased demos of:</p>
+<ul>
+<li><a href="https://github.com/junkdog/tachyonfx">tachyonfx</a></li>
+<li><a href="https://github.com/cxreiff/bevy_ratatui_camera">bevy_ratatui_camera</a></li>
+<li><a href="https://github.com/orhun/ratzilla">ratzilla</a></li>
+</ul>
+
+  
+  
+    
+    
+  
+  <img src="https://jslazak.com/other/piwo2025.png" alt="Me giving a Ratatui lightning talk at Poznańska Impreza Wolnego Oprogramowania" class="center" decoding="async" loading="lazy"/>
+
+<p>Next month I will be giving a talk about <a href="https://github.com/j-g00da/mousefood">Mousefood</a>
+and porting <a href="https://github.com/ratatui/ratatui">Ratatui</a> <em>everywhere</em>
+at <a href="https://www.meetup.com/pl-PL/rust-gdansk/">Rust Gdańsk</a>. See you there!</p>
+
+  
+  
+    
+    
+  
+  <img src="https://jslazak.com/other/rust_gdansk.webp.avif" alt="Rust Gdansk Meetup #9 - Jagoda Ślązak - Ratatui - Are We Embedded Yet? 1 July, 6 - 9 pm, Europejskie Centrum Solidarności" class="center" decoding="async" loading="lazy"/>
+
+
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Thanks for reading! Read other posts?</span>
+                    <hr />
+                </div>
+                <div class="pagination__buttons">
+                        <span class="button previous">
+                            <a href="https://jslazak.com/ratatui-border-merging/">
+                                <span class="button__icon">←</span>&nbsp;
+                                <span class="button__text">Ratatui v0.30 - block border merging</span>
+                            </a>
+                        </span>
+                    
+                    </div>
+            </div>
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2025
+ Jagoda Ślązak</span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

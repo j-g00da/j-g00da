@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>@j-g00da&#x27;s webpage</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://jslazak.com/style.css">
+    <link rel="stylesheet" href="https://jslazak.com/color/orange.css">
+
+        <link rel="stylesheet" href="https://jslazak.com/color/background_blue.css">
+    
+    <link rel="stylesheet" href="https://jslazak.com/font-hack-subset.css">
+
+        
+    <meta name="description" content="A series meant to document and promote the joint effort of making ratatui truly portable.">
+
+    <meta property="og:description" content="A series meant to document and promote the joint effort of making ratatui truly portable.">
+    <meta property="og:title" content="@j-g00da's webpage">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jslazak.com/are-we-embedded-yet-0/">
+
+    <meta property="og:image" content="https://jslazak.com/are-we-embedded-yet.png">
+    <meta name="twitter:image" content="https://jslazak.com/are-we-embedded-yet.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="A series meant to document and promote the joint effort of making ratatui truly portable.">
+    <meta name="twitter:title" content="@j-g00da's webpage">
+    <meta property="twitter:domain" content="jslazak.com">
+    <meta property="twitter:url" content="https://jslazak.com/are-we-embedded-yet-0/">
+
+                <link rel="alternate" type="application/rss+xml" title="@j-g00da&#x27;s webpage RSS Feed" href="https://jslazak.com/rss.xml" />
+                <link rel="alternate" type="application/atom+xml" title="@j-g00da&#x27;s webpage Atom Feed" href="https://jslazak.com/atom.xml" />
+        <link rel="shortcut icon" type="image&#x2F;x-icon" href="/favicon.ico">
+    
+    <a rel="me" href="https://fosstodon.org/@j_g00da" style="display: none;">mastodon verification</a>
+    <meta name="fediverse:creator" content="@j_g00da@fosstodon.org">
+    <script defer src="https://umami.orhun.dev/script.js" data-website-id="69da150e-ae18-4d4c-b6e4-cff66dc2badf"></script>
+</head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://jslazak.com" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            @j-g00da&#x27;s webpage
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        
+                <nav class="menu">
+            <ul class="menu__inner">
+                <li class="active"><a href="https://jslazak.com">blog</a></li>
+            
+                <li><a href="https://jslazak.com/about">about me</a></li>
+            
+                <li><a href="https://github.com/j-g00da" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://jslazak.com/socials">socials</a></li>
+            
+                <li><a href="https://jslazak.com/art">art</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://jslazak.com/are-we-embedded-yet-0/">Are We Embedded Yet? #0</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2025-04-18
+        </span>
+
+    </div>
+
+    
+
+        <div class="post-content">
+            <div style="width:100%; text-align:center;">
+<blockquote>
+<p><em><strong>Ratatui</strong> gave us beautiful TUIs.</em> <br />
+<em><strong>Ratzilla</strong> expanded it to the web.</em> <br />
+<em>But why shall we stop there?</em> <br />
+<em><strong>Why shall we stop anywhere?</strong></em></p>
+<h1 style="justify-content:center;"> Are We Embedded Yet? </h1>
+This series is meant to document and promote the joint effort of making ratatui truly portable.
+</blockquote>
+</div>
+<span id="continue-reading"></span><h2 id="no-std-ratatui">no_std ratatui</h2>
+<hr />
+<p>I've started the <a href="https://github.com/ratatui/ratatui/discussions/1746">discussion</a>
+on making <code>ratatui-core</code> crate no_std just two weeks ago, when I realized
+that <a href="https://github.com/j-g00da/mousefood">mousefood</a> can't become anything more than
+just a gimmick without few upstream changes.
+Today, thanks to commitment of the maintainers and help from the community,
+I'm pretty optimistic that we can see ratatui on stm32 in just few weeks.
+And I'm not talking about just <code>ratatui-core</code> (which was planned for the "first stage"),
+but <code>ratatui-widgets</code> is no_std already!</p>
+<p>Check out the <a href="https://github.com/ratatui/ratatui/issues/1750">tracking issue</a>!</p>
+<p>The last major thing to resolve is to provide an alternative, no_std implementation
+of layout caching.</p>
+<h2 id="">
+  
+  
+  <img src="https://github.com/j-g00da/mousefood/blob/99b654737ff30c08a9abdfcdee99eef6bc876712/assets/logo/mousefood_text_light.svg?raw=true" alt="mousefood" class="center" decoding="async" loading="lazy"/>
+
+</h2>
+<hr />
+<p><strong><a href="https://github.com/j-g00da/mousefood">Mousefood</a> v0.2 is out!</strong>
+This is the point, where the project stops being just a proof of concept and due to that,
+most of the changes since v0.1 are refactoring ones.
+I decided that this also is the time to finally write tests - currently coverage is just around 60%,
+but this should greatly improve in the coming weeks.
+This doesn't mean there are no new features! The new version comes with an optional support of EPDs!</p>
+
+  
+  
+    
+    
+  
+  <img src="https://jslazak.com/projects/mousefood/epd-weact.jpg" alt="mousefood on epd" class="center" decoding="async" loading="lazy"/>
+
+<p>More on that in the <a href="https://docs.rs/mousefood/0.2.0/mousefood/#epd-support">docs</a>.</p>
+<h3 id="what-s-next">What's next?</h3>
+<p>The obvious next step after ratatui becoming no_std would be adapting
+mousefood to use that and testing it out on some previously unsupported device
+(I actually already have a stm32f7 waiting for that.)
+<em>But</em> there is still a lot of other things to complete in mousefood
+such as cursor support (currently cursor is hardcoded at (0,0) and hidden),
+handling the rest of modifiers (there's a PR by <a href="https://github.com/y5">@y5</a> waiting
+for the next release of ratatui that will also add colored underlines)
+or color conversion from indexed colors.
+I also want to eventually add terminal themes.</p>
+<p><em>Also</em> I want to finally start writing some actual apps using it, instead of just demos!
+I've got some interesting ideas for that, but first I need to find some more time...
+If you haven't seen already, <a href="https://github.com/micielski">@micielski</a> actually managed to
+<a href="https://github.com/intuis/mnyaoo32">read IRC messages on esp32 and display them on SPI screen using mousefood!</a></p>
+<h2 id="ratatui-uefi">ratatui-uefi</h2>
+<hr />
+<p>Something I didn’t know until recently: there <em>are</em> UEFI targets with std support in nightly Rust.
+Even crazier - just a few days ago, I didn’t expect to see <strong>Ratatui running in UEFI</strong> this week! Check out
+<a href="https://github.com/reubeno">@reubeno</a>'s new ratatui backend -
+<a href="https://github.com/reubeno/tui-uefi?tab=readme-ov-file"><code>ratatui-uefi</code> and a companion crate for handling inputs - <code>terminput-uefi</code></a>
+A truly amazing project that opens doors to some fun ideas.</p>
+
+  
+  
+    
+    
+  
+  <img src="https://jslazak.com/other/ratatui-uefi.png" alt="ratatui uefi" class="center" decoding="async" loading="lazy"/>
+
+
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Thanks for reading! Read other posts?</span>
+                    <hr />
+                </div>
+                <div class="pagination__buttons">
+                    
+                        <span class="button next">
+                            <a href="https://jslazak.com/are-we-embedded-yet-1/">
+                                <span class="button__text">Are We Embedded Yet? #1</span>&nbsp;
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    </div>
+            </div>
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2025
+ Jagoda Ślązak</span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

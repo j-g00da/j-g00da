@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>@j-g00da&#x27;s webpage</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://jslazak.com/style.css">
+    <link rel="stylesheet" href="https://jslazak.com/color/orange.css">
+
+        <link rel="stylesheet" href="https://jslazak.com/color/background_blue.css">
+    
+    <link rel="stylesheet" href="https://jslazak.com/font-hack-subset.css">
+
+        
+    <meta name="description" content="Updates on no_std ratatui and mousefood, new backend - soft_ratatui.">
+
+    <meta property="og:description" content="Updates on no_std ratatui and mousefood, new backend - soft_ratatui.">
+    <meta property="og:title" content="@j-g00da's webpage">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jslazak.com/are-we-embedded-yet-1/">
+
+    <meta property="og:image" content="https://jslazak.com/are-we-embedded-yet.png">
+    <meta name="twitter:image" content="https://jslazak.com/are-we-embedded-yet.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="Updates on no_std ratatui and mousefood, new backend - soft_ratatui.">
+    <meta name="twitter:title" content="@j-g00da's webpage">
+    <meta property="twitter:domain" content="jslazak.com">
+    <meta property="twitter:url" content="https://jslazak.com/are-we-embedded-yet-1/">
+
+                <link rel="alternate" type="application/rss+xml" title="@j-g00da&#x27;s webpage RSS Feed" href="https://jslazak.com/rss.xml" />
+                <link rel="alternate" type="application/atom+xml" title="@j-g00da&#x27;s webpage Atom Feed" href="https://jslazak.com/atom.xml" />
+        <link rel="shortcut icon" type="image&#x2F;x-icon" href="/favicon.ico">
+    
+    <a rel="me" href="https://fosstodon.org/@j_g00da" style="display: none;">mastodon verification</a>
+    <meta name="fediverse:creator" content="@j_g00da@fosstodon.org">
+    <script defer src="https://umami.orhun.dev/script.js" data-website-id="69da150e-ae18-4d4c-b6e4-cff66dc2badf"></script>
+</head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://jslazak.com" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            @j-g00da&#x27;s webpage
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        
+                <nav class="menu">
+            <ul class="menu__inner">
+                <li class="active"><a href="https://jslazak.com">blog</a></li>
+            
+                <li><a href="https://jslazak.com/about">about me</a></li>
+            
+                <li><a href="https://github.com/j-g00da" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://jslazak.com/socials">socials</a></li>
+            
+                <li><a href="https://jslazak.com/art">art</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://jslazak.com/are-we-embedded-yet-1/">Are We Embedded Yet? #1</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2025-05-04
+        </span>
+
+    </div>
+
+    
+
+        <div class="post-content">
+            <div style="width:100%; text-align:center;">
+<p><em>This series is meant to document and promote the joint effort of making ratatui truly portable.</em></p>
+</div>
+<h2 id="update-no-std-ratatui">Update: no_std ratatui</h2>
+<span id="continue-reading"></span>
+<hr />
+<p><a href="https://github.com/ratatui/ratatui/pull/1778"><code>Backend::Error</code> merged!</a>
+One of the blockers for no_std ratatui was the explicit use of <code>std::io::Error</code> in <code>Backend</code> (and
+by extension, in <code>Terminal</code> as well).
+Now, <code>Backend</code> implementations must define an associated <code>Error</code> type.
+Built-in backends will still use <code>std::io::Error</code>, but third-party ones
+like <a href="https://github.com/j-g00da/mousefood">mousefood</a>
+can now use a different error type - which will enable a proper <code>no_std</code> compatibility!</p>
+<p>I'm actually working on a <a href="https://github.com/ratatui/ratatui/pull/1817">follow-up PR</a>
+and ran into a pretty interesting issue,
+so if anyone reading this has ideas, feel free to jump in and comment.</p>
+<p>As for the layout cache problem I mentioned in the last post -
+since there's no great solution, <a href="https://github.com/ratatui/ratatui/pull/1795">the decision for now
+is to simply <strong>not provide a cache in <code>no_std</code> mode</strong></a>.
+When this is merged, the last things left would be just few minor tweaks and adding <code>std</code> feature flag.</p>
+<div style="width:100%; text-align:center;">
+<blockquote>
+<p><em>We are one step closer to no_std ratatui.</em> <br />
+██████████████████░░ 90%</p>
+</blockquote>
+</div>
+<h2 id="update-mousefood">Update: mousefood</h2>
+<hr />
+<p><a href="https://github.com/j-g00da/mousefood">Mousefood</a> recently got italic modifier support
+as well as readme section about bold/italic fonts that also points out some limitations.
+Additionally, v0.2.1 patch was released that mainly targeted some inaccuracies in the docs.</p>
+<p>
+  
+  
+    
+    
+  
+  <img src="https://jslazak.com/projects/mousefood/bold_italic.png" alt="bold and italic fonts on mousefood" class="center" decoding="async" loading="lazy"/>
+
+
+<em>Bold and italic modifiers in mousefood, italic will be available with the next release.</em></p>
+<p>The development of mousefood may be a bit slower right now,
+as I'm focusing on finalizing <code>no_std</code> support in Ratatui -
+but I'm still making sure to work on it regularly.
+<em>If you'd like to help out, feel free to reach out!</em></p>
+<p>Full changelog of v0.2.1:</p>
+<h3 id="tractor-refactor">🚜 Refactor</h3>
+<ul>
+<li><em>(examples)</em> Remove unnecessary <code>extern crate</code> from simulator example</li>
+</ul>
+<h3 id="books-documentation">📚 Documentation</h3>
+<ul>
+<li><em>(readme)</em> Fix simulator code snippet</li>
+</ul>
+<h3 id="gear-miscellaneous-tasks">⚙️ Miscellaneous Tasks</h3>
+<ul>
+<li><em>(examples)</em> Configure simulator example in Cargo.toml</li>
+<li>Update list of excluded paths in Cargo.toml</li>
+</ul>
+<h2 id="soft-ratatui">soft_ratatui</h2>
+<hr />
+<blockquote>
+<p>Software rendering backend for <a href="https://github.com/ratatui/ratatui">ratatui</a>. No GPU required. TUI everywhere.</p>
+</blockquote>
+<p>Another new <a href="https://github.com/ratatui/ratatui">Ratatui</a> backend just dropped -
+<a href="https://github.com/gold-silver-copper/soft_ratatui">soft_ratatui</a>
+by <a href="https://github.com/gold-silver-copper">@gold-silver-copper</a>,
+the creator of <a href="https://github.com/gold-silver-copper/egui_ratatui">egui_ratatui</a>.
+The crate uses <a href="https://github.com/linebender/tiny-skia">tiny-skia</a> to render efficiently directly to a window,
+ditching the terminal emulator completely.
+This allows for much higher frame rates out of the box (up to 200 FPS).
+It will be especially useful for TUI games or interactive tools where smooth performance really matters!</p>
+<p>Soft_ratatui is under heavy development and I was told that it will eventually move away from
+tiny-skia in favor of a custom lightweight renderer.</p>
+
+  
+  
+    
+    
+  
+  <img src="https://jslazak.com/other/soft_ratatui.png" alt="colors_rgb example running at 140 FPS using soft_ratatui" class="center" decoding="async" loading="lazy"/>
+
+<p><em>colors_rgb running at over 140 FPS, "s" in "fps" gets cut off as the example doesn't expect that many digits!</em></p>
+<h2 id="thanks">Thanks!</h2>
+<hr />
+<p>Huge thanks for the response to the last post -
+it got way more attention than I expected, and even made its way into
+<a href="https://this-week-in-rust.org/blog/2025/04/23/this-week-in-rust-596/"><em>This Week in Rust #596</em></a>
+and <a href="https://www.theembeddedrustacean.com/p/the-embedded-rustacean-issue-44"><em>The Embedded Rustacean #44</em></a>.
+Thanks to everyone who helped spread Ratatui even further!</p>
+
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Thanks for reading! Read other posts?</span>
+                    <hr />
+                </div>
+                <div class="pagination__buttons">
+                        <span class="button previous">
+                            <a href="https://jslazak.com/are-we-embedded-yet-0/">
+                                <span class="button__icon">←</span>&nbsp;
+                                <span class="button__text">Are We Embedded Yet? #0</span>
+                            </a>
+                        </span>
+                    
+                    
+                        <span class="button next">
+                            <a href="https://jslazak.com/ratatui-border-merging/">
+                                <span class="button__text">Ratatui v0.30 - block border merging</span>&nbsp;
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    </div>
+            </div>
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2025
+ Jagoda Ślązak</span>
+                    <span class="copyright-theme">
+                        <span class="copyright-theme-sep">:: </span>
+                        Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
+                    </span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>
