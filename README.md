@@ -1,9 +1,11 @@
 Hi!
 
-I'm Jagoda, a maintainer of [Ratatui](https://github.com/ratatui/ratatui/), open source enthusiast, and passionate Rustacean.
-Learn more about my work on my blog: [jslazak.com](https://jslazak.com/).
+I'm Jagoda.
+- Working on [Arch Linux Package Management](https://gitlab.archlinux.org/archlinux/alpm/alpm).
+- Maintaining [Ratatui](https://github.com/ratatui/ratatui).
+- Writing a [blog](jslazak.com) sometimes.
 
-I'm currently [open for job opportunities](https://www.linkedin.com/in/jslazak/).
+Job offers -> contact me on [fediverse](https://fosstodon.org/@j_g00da) or send an email to jslazak - at - jslazak - dot - com
 
 ---
 
