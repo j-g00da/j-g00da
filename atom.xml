@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>@j-g00da&#x27;s webpage</title>
+    <link rel="self" type="application/atom+xml" href="https://jslazak.com/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://jslazak.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-01-09T00:00:00+00:00</updated>
+    <id>https://jslazak.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Drawing ASCII-art using pwd and a DNS</title>
+        <published>2026-01-09T00:00:00+00:00</published>
+        <updated>2026-01-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jslazak.com/ascii-art-over-pwd/"/>
+        <id>https://jslazak.com/ascii-art-over-pwd/</id>
+        
+        <summary type="html">&lt;p&gt;Did you know you can have newlines in pathnames?
+The design is very human and this absolutely doesn&#x27;t have any unforeseen consequences!&lt;&#x2F;p&gt;
+&lt;p&gt;Also a friendly reminder that you can store anything on a nameserver if you try hard enough.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Originally posted by me on donotsta.re (2025-12-23)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Reverse engineering package name validation on PyPI</title>
+        <published>2025-11-16T00:00:00+00:00</published>
+        <updated>2025-11-16T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jslazak.com/reverse-engineering-package-name-validation-on-pypi/"/>
+        <id>https://jslazak.com/reverse-engineering-package-name-validation-on-pypi/</id>
+        
+        <summary type="html">&lt;p&gt;If you&#x27;ve ever tried to publish a package on &lt;a href=&quot;https:&#x2F;&#x2F;pypi.org&#x2F;&quot;&gt;PyPI&lt;&#x2F;a&gt;,
+you &lt;em&gt;might&lt;&#x2F;em&gt; have encountered a quite interesting error message:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;error: Failed to publish [..] to https:&#x2F;&#x2F;upload.pypi.org&#x2F;legacy&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;  Caused by: Upload failed with status code 400 Bad Request.
+&lt;&#x2F;span&gt;&lt;span&gt;  Server says: 400 The name [..] is too similar to an existing project.
+&lt;&#x2F;span&gt;&lt;span&gt;  See https:&#x2F;&#x2F;pypi.org&#x2F;help&#x2F;#project-name for more information.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Sadly it&#x27;s not very clear what &quot;too similar&quot; means in this context.
+Also there&#x27;s no way to check if your name is acceptable before actually trying to upload the package.&lt;&#x2F;p&gt;
+&lt;p&gt;Luckily, PyPI warehouse is open source, so let&#x27;s just check how the validation is implemented.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Always a work in progress</title>
+        <published>2025-11-13T00:00:00+00:00</published>
+        <updated>2025-11-13T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jslazak.com/always-a-work-in-progress/"/>
+        <id>https://jslazak.com/always-a-work-in-progress/</id>
+        
+        <summary type="html">&lt;p&gt;I think 2025 was a good year (for me, it would be hard to say it was that great in general).
+Well, it still &lt;em&gt;is&lt;&#x2F;em&gt; because as I&#x27;m writing this, it&#x27;s 12th November.
+I wanted to wait for the end of the year before starting to draft this post, but well -
+I&#x27;m in the right mood, and it makes more sense to act instead of holding back (this is probably a foreshadowing).&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Do Stuff - Kind-Of-An-Open-Letter-To-Myself</title>
+        <published>2025-10-11T00:00:00+00:00</published>
+        <updated>2025-10-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jslazak.com/do-stuff/"/>
+        <id>https://jslazak.com/do-stuff/</id>
+        
+        <summary type="html">&lt;p&gt;I&#x27;ve been meaning to write this post for some time now, well I&#x27;ve been meaning to write several posts for some time now so I thought -
+let&#x27;s write one post that is especially hard to follow, that&#x27;s even better right?
+What finally pushed me to write was yesterday&#x27;s (as I&#x27;m writing this) &lt;a href=&quot;https:&#x2F;&#x2F;pastagang.cc&quot;&gt;pastagang&lt;&#x2F;a&gt; birthday party.
+If you don&#x27;t know what &lt;a href=&quot;https:&#x2F;&#x2F;pastagang.cc&quot;&gt;pastagang&lt;&#x2F;a&gt; is, then this post is not about &lt;a href=&quot;https:&#x2F;&#x2F;pastagang.cc&quot;&gt;pastagang&lt;&#x2F;a&gt; ...but you should get the idea by the end anyway (or just read &lt;a href=&quot;https:&#x2F;&#x2F;pastagang.cc&quot;&gt;pastagang.cc&lt;&#x2F;a&gt;), &lt;em&gt;this post will be quite chaotic&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s something different this time, a little bit more personal. I had quite a lot of &quot;breakthroughs&quot; this year and want to share this.
+Maybe, but just maybe you will find this relatable.
+I&#x27;m not an influencer. I am the only planned target audience for this post.
+If you are not me, add &quot;maybe&quot; to every &quot;should&quot; you read. Some of the things may not apply to you. You may even think this whole post is just plain wrong, and I&#x27;m fine with that.
+You are getting an almost unedited look at my stream of thoughts, and if you think that this post is a mess - thank goodness,
+this means you are &lt;em&gt;not&lt;&#x2F;em&gt; in my head but an actual human being, &lt;em&gt;wheeeew&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Are We Embedded Yet? #2</title>
+        <published>2025-06-11T00:00:00+00:00</published>
+        <updated>2025-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jslazak.com/are-we-embedded-yet-2/"/>
+        <id>https://jslazak.com/are-we-embedded-yet-2/</id>
+        
+        <summary type="html">&lt;div style=&quot;width:100%; text-align:center;&quot;&gt;
+&lt;p&gt;&lt;em&gt;This series is meant to document and promote the joint effort of making ratatui truly portable.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;ratatui-alpha-with-no-std-support-released&quot;&gt;Ratatui alpha with no-std support released!&lt;&#x2F;h2&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Are We Embedded Yet? #1</title>
+        <published>2025-05-04T00:00:00+00:00</published>
+        <updated>2025-05-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jslazak.com/are-we-embedded-yet-1/"/>
+        <id>https://jslazak.com/are-we-embedded-yet-1/</id>
+        
+        <summary type="html">&lt;div style=&quot;width:100%; text-align:center;&quot;&gt;
+&lt;p&gt;&lt;em&gt;This series is meant to document and promote the joint effort of making ratatui truly portable.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;update-no-std-ratatui&quot;&gt;Update: no_std ratatui&lt;&#x2F;h2&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Are We Embedded Yet? #0</title>
+        <published>2025-04-18T00:00:00+00:00</published>
+        <updated>2025-04-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jslazak.com/are-we-embedded-yet-0/"/>
+        <id>https://jslazak.com/are-we-embedded-yet-0/</id>
+        
+        <summary type="html">&lt;div style=&quot;width:100%; text-align:center;&quot;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Ratatui&lt;&#x2F;strong&gt; gave us beautiful TUIs.&lt;&#x2F;em&gt; &lt;br &#x2F;&gt;
+&lt;em&gt;&lt;strong&gt;Ratzilla&lt;&#x2F;strong&gt; expanded it to the web.&lt;&#x2F;em&gt; &lt;br &#x2F;&gt;
+&lt;em&gt;But why shall we stop there?&lt;&#x2F;em&gt; &lt;br &#x2F;&gt;
+&lt;em&gt;&lt;strong&gt;Why shall we stop anywhere?&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h1 style=&quot;justify-content:center;&quot;&gt; Are We Embedded Yet? &lt;&#x2F;h1&gt;
+This series is meant to document and promote the joint effort of making ratatui truly portable.
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;div&gt;</summary>
+        
+    </entry>
+</feed>
